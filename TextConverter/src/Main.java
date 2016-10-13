@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Main {
 	public static void main(String[] args) {
@@ -25,7 +28,23 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		sc = sc.useDelimiter("\n");
 		System.out.println("Type in full path of txt file: ");
-		return sc.next();
+		filename = sc.next();
+		
+	    String content = null;
+	    File file = new File(filename);
+	    FileReader reader = null;
+	    try {
+	        reader = new FileReader(file);
+	        char[] chars = new char[(int) file.length()];
+	        reader.read(chars);
+	        content = new String(chars);
+	        reader.close();
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    } finally {
+	        if(reader != null){reader.close();}
+	    }
+	    return content;
 	}
 	
 	public static String getTextFromConsole() {
