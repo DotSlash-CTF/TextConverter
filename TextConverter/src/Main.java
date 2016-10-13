@@ -31,9 +31,9 @@ public class Main {
 		filename = sc.next();
 		
 	    String content = null;
-	    File file = new File(filename);
-	    FileReader reader = null;
-	    try {
+	    File file = new File(filename); // Create the file from given filename
+	    FileReader reader = null; // Create a file reader object
+	    try { // There may be many errors so we chloroform the code
 	        reader = new FileReader(file);
 	        char[] chars = new char[(int) file.length()];
 	        reader.read(chars);
