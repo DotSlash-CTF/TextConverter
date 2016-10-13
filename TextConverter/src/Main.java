@@ -3,19 +3,19 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 		String text = "";
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in); // Create ability to read in user input
 		while (true) {
-			System.out.print("Import from file or console? (f/c): ");
-			sc = sc.useDelimiter("\n");
-			String choice = sc.next();
+			System.out.print("Import from file or console? (f/c): "); // Print to console
+			sc = sc.useDelimiter("\n"); // Set the scanner to only end when the user hits return
+			String choice = sc.next(); // Create a new string with the user's input
 			switch (choice) {
-				case "f":
+				case "f": // If the user typed in "f", then...
 					text = getTextFromFile();
 					break;
 				case "c":
 					text = getTextFromConsole();
 					break;
-				default:
+				default: // If the user messed up, then...
 					System.out.println("It is literally one letter. How did you mess up?");
 			}
 		}
