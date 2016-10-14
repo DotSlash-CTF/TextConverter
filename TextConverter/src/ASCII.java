@@ -1,4 +1,3 @@
-
-public class ASCII {
+public class ASCII extends Text {
 
 }

@@ -1,4 +1,4 @@
-public class Decimal {
+public class Decimal extends Text {
 	int number;
 	public Decimal(int num) {
 		number = num;

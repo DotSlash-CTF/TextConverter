@@ -1,4 +1,4 @@
-public class Binary {
+public class Binary extends Text {
 	int[] number;
 	public Binary(int[] num) {
 		number = num;
