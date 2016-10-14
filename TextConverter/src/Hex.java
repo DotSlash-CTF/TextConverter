@@ -1,3 +1,3 @@
-public class Hex {
+public class Hex extends Text {
 
 }
